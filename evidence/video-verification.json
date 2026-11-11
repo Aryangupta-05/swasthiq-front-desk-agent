@@ -1,0 +1,10 @@
+{
+  "file": "SwasthiQ_Failure_Review.mp4",
+  "duration_seconds": 180.0,
+  "resolution": [
+    1440,
+    1000
+  ],
+  "audio": "Synthetic Microsoft David narration; seven padded WAV segments muxed as AAC",
+  "bytes": 6153859
+}

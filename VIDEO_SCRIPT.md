@@ -1,6 +1,6 @@
 # Three-minute failure-focused recording
 
-Status: NOT YET RECORDED. This document is an executable recording plan, not evidence that a recording exists.
+Status: RECORDED AND PUBLISHED. The actual browser recording was encoded and inspected: 180.0 seconds, 1440×1000, H.264 video, AAC audio. Narration uses the synthetic Microsoft David voice, labelled throughout. Public video: https://github.com/Aryangupta-05/swasthiq-front-desk-agent/releases/tag/video-review. Media metadata is in `evidence/video-verification.json`.
 
 Use the actual running app. Hide the terminal's environment file and any account pages. All clinic data shown is synthetic. Show tool results and machine-readable outcome rather than narration-only assertions. A generated voiceover, if used, must be labelled as synthetic narration, not Aryan's voice.
 

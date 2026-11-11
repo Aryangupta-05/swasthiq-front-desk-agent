@@ -2,6 +2,8 @@
 
 A Python appointment agent with a React handoff workspace. The tool layer owns every patient, slot and appointment claim. Clinical routing happens before any mutation. This is a synthetic evaluation simulator, not a clinical service.
 
+[Live application](https://swasthiq-front-desk-agent-n5za.onrender.com) · [Three-minute failure review](https://github.com/Aryangupta-05/swasthiq-front-desk-agent/releases/tag/video-review) · [Verified results](TEST_RESULTS.md)
+
 ## Run
 
 Prerequisites: Python 3.11+ and Node.js 24+ with npm. From the repository root:

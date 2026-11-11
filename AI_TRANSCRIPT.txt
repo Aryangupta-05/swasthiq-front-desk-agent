@@ -119,3 +119,8 @@ do it
 
 === AI involvement and verification boundary ===
 The coding assistant authored the implementation, adversarial cases, tests, UI, documentation and release scripts, and executed the reported automated checks. The user supplied the task, authority, starter pack and Gemini credential. No independent manual authorship or human testing is claimed. Gemini application extraction instructions are preserved in backend/gemini.py. Results and publication status are recorded separately in TEST_RESULTS.md and DELIVERY_STATUS.md. Secrets are deliberately omitted from this transcript.
+
+=== Additional explicit user approvals ===
+Approve storing the key on Render
+Approve this Google account for Render sign-in
+
