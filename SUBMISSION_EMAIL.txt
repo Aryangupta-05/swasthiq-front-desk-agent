@@ -1,0 +1,24 @@
+STATUS: LOCAL DRAFT ONLY — NOT SENT
+Before sending, Aryan must replace the hours line with his actual time and confirm the assignment deadline. Do not guess either value.
+
+To: hiring@swasthiq.in
+Subject: Engineering Assignment - Aryan Gupta
+
+Hi SwasthiQ team,
+
+Please find my Clinic Front Desk Agent submission:
+
+Repository: https://github.com/Aryangupta-05/swasthiq-front-desk-agent
+Live application: https://swasthiq-front-desk-agent-n5za.onrender.com
+Three-minute failure review: https://github.com/Aryangupta-05/swasthiq-front-desk-agent/releases/tag/video-review
+
+The repository separates the Python backend, React frontend and eight original adversarial scripts. It includes DECISIONS.md, the actual coding-assistant prompts with credentials redacted, reproducible checks and measured conversation metrics. The failure review records real executions and a real limitation; its narration is explicitly synthetic.
+
+Verification passed 74 tests, all 15 supplied and eight adversarial expected outcomes across three runs both locally and remotely, and seven browser integration checks on each environment. All 69 remote runner requests and 23 inspected remote trace/mutation checks passed. The measured metrics and any provider fallbacks are documented in TEST_RESULTS.md and DELIVERY_STATUS.md. The free host can cold-start, and its SQLite history is ephemeral across service restarts; every evaluation request intentionally starts from the original clinic snapshot.
+
+Hours actually spent: UNKNOWN — Aryan to enter his actual time before sending.
+
+With another four hours, I would prioritize independently reviewed multilingual triage and negation cases, uncached provider determinism checks, richer interactive date clarification, and verified caller authentication with an audited human-handoff integration.
+
+Regards,
+Aryan Gupta

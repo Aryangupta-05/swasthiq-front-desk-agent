@@ -54,11 +54,12 @@ def main():
         page.get_by_role("button", name="Back to handoff queue").click()
         page.get_by_role("button", name="All runs", exact=True).click()
         expect(page.get_by_role("button", name="cv_0002", exact=True).first).to_be_visible()
-        page.screenshot(path=str(output / "handoff-queue.png"), full_page=True)
+        page.get_by_role("button", name="open", exact=True).click()
+        page.screenshot(path=str(output / "handoff-queue.png"), full_page=False)
         checks.append("Sidebar, queue filters and conversation navigation work")
         page.set_viewport_size({"width": 390, "height": 844})
         assert page.evaluate("document.documentElement.scrollWidth <= innerWidth")
-        page.screenshot(path=str(output / "mobile.png"), full_page=True)
+        page.screenshot(path=str(output / "mobile.png"), full_page=False)
         checks.append("390px mobile viewport has no document overflow")
         # A real failed API response must surface as a visible error.
         page.route(
@@ -70,6 +71,7 @@ def main():
         page.get_by_role("button", name="Run conversation", exact=True).click()
         page.get_by_role("button", name="Execute script", exact=True).click()
         expect(page.get_by_role("alert")).to_contain_text("Simulated backend unavailable")
+        expect(page.get_by_role("dialog").get_by_role("alert")).to_be_visible()
         checks.append("Backend failure is shown, not a fabricated success")
         browser.close()
     report = {"passed": len(checks), "checks": checks, "console_errors": failures, "url": args.url}

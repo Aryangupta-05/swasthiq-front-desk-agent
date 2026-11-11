@@ -283,7 +283,7 @@ export default function App() {
             </button>
           </div>
         </header>
-        {error && (
+        {error && !composer && (
           <div className="alert" role="alert">
             {error}
             <button
@@ -577,6 +577,11 @@ export default function App() {
                 ×
               </button>
             </div>
+            {error && (
+              <div className="alert" role="alert">
+                {error}
+              </div>
+            )}
             <p className="subtle">
               Edit a fixed script. Each line is one caller turn. Uses the
               original synthetic clinic snapshot.

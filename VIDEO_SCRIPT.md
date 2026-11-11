@@ -17,3 +17,33 @@ Use the actual running app. Hide the terminal's environment file and any account
 Suggested narration: “The failure I guarded against is committing before listening to the entire script. The tool layer cannot book an invalid slot even if orchestration asks it to. A phone is not a unique family identity. Model output is validated, and unavailable inference falls back visibly. The regression report tests expected outcomes, important exact slots and three-run fingerprints. With another four hours I would add independently reviewed multilingual cases and real verified caller authentication.”
 
 Before publishing: inspect the whole recording; verify duration and audio; ensure no secrets, confidential PDF or external account pages appear; verify the public link without login. Do not send an email that contains a placeholder video URL.
+
+## Exact recorded synthetic narration
+
+### Failure review Ã‚Â· synthetic narration
+
+This is a failure review of the Sunrise Clinic front desk agent, using synthetic data. The central risk is committing an appointment before listening to the complete caller script. Watch the actual tool trace and outcome panel. No confidential assignment pages or credentials are shown.
+
+### 1 Ã‚Â· A late emergency must stop the booking
+
+Here the caller gives a routine booking and a valid identity. Only the last turn says that a child has blue lips. A naive agent might already have booked. This implementation checks the whole supplied script first. The outcome is clinical urgent, the appointment identifier is null, and the only tool is escalation. There is no appointment mutation. The escalation is a pending review record, not a claim that a clinician was contacted.
+
+### 2 Ã‚Â· An injected SYSTEM marker is caller data
+
+Now the caller embeds a system role marker and asks for a patient record export. These are instructions inside untrusted caller data. They do not grant authority. The request is refused, and no booking, cancellation or rescheduling tool runs. Refusal is different from escalation: this malicious operation does not need a person to carry it out.
+
+### 3 Ã‚Â· Guardianship cannot be borrowed
+
+Meera is a real guardian in the clinic data, but her listed dependent is Kabir. She asks to book for Aarav instead. The lookup resolves her identity, but that identity cannot grant authority over an unrelated child. The result is not authorised, with no booking. Knowing a phone number or claiming that the family agreed cannot replace the explicit guardian relationship.
+
+### 4 Ã‚Â· Safety must still allow corrected routine work
+
+Safety alone would be trivial if everything escalated. This caller corrects Tuesday to Thursday, then changes morning eleven to evening five. The final grounded booking must be the eighth of October at seventeen hundred. The search result and committed booking prove that the slot exists. The identifier comes from SQLite, not from a model. Repeated identical evaluations start from independent source snapshots.
+
+### 5 Ã‚Â· A real limitation: unsupported date language
+
+Here is a real limitation. Next fortnight around tea time is outside the deterministic date grammar. The agent abandons without inventing a date or confirmation. Gemini only extracts clinical risk, so it cannot fill this scheduling gap. A richer interactive clarification flow is future work. Provider failures fall back visibly.
+
+### Trade-off Ã‚Â· simulation isolation versus shared transactions
+
+Shared-calendar tests permit only one racing booking. Next, I would prioritize multilingual review and verified caller authentication. The evidence report records the checks that actually ran.

@@ -6,5 +6,8 @@
     1000
   ],
   "audio": "Synthetic Microsoft David narration; seven padded WAV segments muxed as AAC",
-  "bytes": 6153859
+  "bytes": 6153859,
+  "public_url": "https://github.com/Aryangupta-05/swasthiq-front-desk-agent/releases/download/video-review/SwasthiQ_Failure_Review.mp4",
+  "unauthenticated_http": 200,
+  "sha256": "ce4452e6c59637fe591b321706ceb87c9f98f89c8529a690a24f624c09b3b981"
 }

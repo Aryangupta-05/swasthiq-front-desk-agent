@@ -1,0 +1,12 @@
+{
+  "url": "https://swasthiq-front-desk-agent-n5za.onrender.com",
+  "health_http": 200,
+  "health": {
+    "status": "ok",
+    "storage": "sqlite",
+    "evaluation_isolation": true,
+    "model_enabled": true
+  },
+  "frontend_http": 200,
+  "frontend_title_present": true
+}

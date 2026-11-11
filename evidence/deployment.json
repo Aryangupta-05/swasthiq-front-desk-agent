@@ -1,0 +1,13 @@
+{
+  "provider": "Render",
+  "plan": "free",
+  "region": "singapore",
+  "runtime": "docker",
+  "service_id": "srv-dbq6p30m7kps73a99ui0",
+  "deploy_id": "dep-dbq6qo67bikc738m505g",
+  "source_commit": "f772571778af31a71da7949bb9b46d3df1466392",
+  "status": "live",
+  "url": "https://swasthiq-front-desk-agent-n5za.onrender.com",
+  "health_check_path": "/health",
+  "verification": "Render dashboard showed last successful commit f772571 and Live; external health and frontend returned 200"
+}

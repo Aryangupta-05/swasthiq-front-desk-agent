@@ -1,0 +1,14 @@
+{
+  "passed": 7,
+  "checks": [
+    "Production React bundle renders",
+    "Runner sends caller script to backend and renders real urgent escalation with exactly one tool",
+    "Resolve persists in backend SQLite across reload",
+    "Corrected booking reaches grounded committed outcome",
+    "Sidebar, queue filters and conversation navigation work",
+    "390px mobile viewport has no document overflow",
+    "Backend failure is shown, not a fabricated success"
+  ],
+  "console_errors": [],
+  "url": "https://swasthiq-front-desk-agent-n5za.onrender.com"
+}

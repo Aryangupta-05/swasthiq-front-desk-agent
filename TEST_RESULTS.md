@@ -59,3 +59,11 @@ The fixed-script API is batch processing, not a reactive voice call. The public 
 ## Reproduce
 
 Run `python scripts/validate.py` after installing development dependencies. For configured-provider runs, start the API with an ignored `.env`, then use the exact commands in README. `runner.py` remains byte-for-byte unchanged: SHA-256 `35a1cf6049fe304e75ba762d8cf91ac96df267e0733579ce15f92fe8698de64a`. The separate comparator is required because the original runner does not grade expected blocks or fail its exit code on instability.
+
+## Public deployment verification
+
+The free Render Docker container built and reached Live. The public frontend and `/health` returned HTTP 200 without authentication. All 15 supplied scripts and eight adversarial scripts passed three times remotely: **69/69 requests**, expected outcomes and stable fingerprints. **23/23** inspected public traces matched actual runner calls in execution order and the schedule mutation invariants.
+
+The public browser flow passed 7 checks with 0 runtime errors. First-run remote extractions returned 14 validated model responses and 1795 reported tokens; timeout and skipped-call statuses remain explicit. Local first-run reported tokens total 1664. These totals exclude connectivity probes, unrelated browser calls and unavailable provider usage.
+
+Remote per-conversation metrics and exact provider statuses are in `evidence/remote-supplied.json`, `evidence/remote-adversarial.json` and `evidence/remote-trace-summary.json`. Public browser screenshots and check details are under `evidence/remote-browser/`. The media file was verified as 180.0 seconds, H.264/AAC, with an unauthenticated HTTP 200 public asset. The local Docker daemon/Compose command was not exercised; the Dockerfile was built and run successfully by Render.

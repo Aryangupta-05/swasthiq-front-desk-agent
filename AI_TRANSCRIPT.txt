@@ -123,4 +123,3 @@ The coding assistant authored the implementation, adversarial cases, tests, UI, 
 === Additional explicit user approvals ===
 Approve storing the key on Render
 Approve this Google account for Render sign-in
-

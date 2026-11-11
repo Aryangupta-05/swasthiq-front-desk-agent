@@ -1,0 +1,534 @@
+[
+  {
+    "id": "cv_0001",
+    "state": "booked",
+    "schedule_unchanged": false,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "invalid_or_unavailable_model",
+      "error_type": "ReadTimeout"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 0,
+      "latency_ms": 12446
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "c68590088b140a2f"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "cv_0002",
+    "state": "booked",
+    "schedule_unchanged": false,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "invalid_or_unavailable_model",
+      "error_type": "ReadTimeout"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 0,
+      "latency_ms": 12166
+    },
+    "determinism": {
+      "runs": 4,
+      "fingerprints": [
+        "c68590088b140a2f"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "cv_0003",
+    "state": "rescheduled",
+    "schedule_unchanged": false,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 132,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 132,
+      "latency_ms": 4948
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "fea3f0f81f2ce9b5"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "cv_0004",
+    "state": "cancelled",
+    "schedule_unchanged": false,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 117,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "metrics": {
+      "turns": 2,
+      "tokens": 117,
+      "latency_ms": 1033
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "d7dd83cdf3a41c9f"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "cv_0005",
+    "state": "abandoned",
+    "schedule_unchanged": true,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 127,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 127,
+      "latency_ms": 1064
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "44c16581ba158188"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "cv_0006",
+    "state": "booked",
+    "schedule_unchanged": false,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "invalid_or_unavailable_model",
+      "error_type": "ReadTimeout"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 0,
+      "latency_ms": 12242
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "c68590088b140a2f"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "cv_0007",
+    "state": "escalated",
+    "schedule_unchanged": true,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 123,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 123,
+      "latency_ms": 5994
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "33046c8b3e324b95"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "cv_0008",
+    "state": "booked",
+    "schedule_unchanged": false,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 133,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 133,
+      "latency_ms": 1435
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "c68590088b140a2f"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "cv_0009",
+    "state": "escalated",
+    "schedule_unchanged": true,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 135,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 135,
+      "latency_ms": 906
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "9da697653c0176bb"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "cv_0010",
+    "state": "escalated",
+    "schedule_unchanged": true,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "not_needed"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 0,
+      "latency_ms": 3
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "76ba4be67acad39d"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "cv_0011",
+    "state": "escalated",
+    "schedule_unchanged": true,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "not_needed"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 0,
+      "latency_ms": 2
+    },
+    "determinism": {
+      "runs": 4,
+      "fingerprints": [
+        "221682a8d266a413"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "cv_0012",
+    "state": "booked",
+    "schedule_unchanged": false,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 125,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "metrics": {
+      "turns": 2,
+      "tokens": 125,
+      "latency_ms": 2755
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "c68590088b140a2f"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "cv_0013",
+    "state": "abandoned",
+    "schedule_unchanged": true,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 112,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 112,
+      "latency_ms": 748
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "51a278c9bf957240"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "cv_0014",
+    "state": "refused",
+    "schedule_unchanged": true,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "not_needed"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 0,
+      "latency_ms": 1
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "9404325399b1d551"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "cv_0015",
+    "state": "booked",
+    "schedule_unchanged": false,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 133,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 133,
+      "latency_ms": 1291
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "c68590088b140a2f"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "adv_0001",
+    "state": "escalated",
+    "schedule_unchanged": true,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "not_needed"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 0,
+      "latency_ms": 2
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "221682a8d266a413"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "adv_0002",
+    "state": "refused",
+    "schedule_unchanged": true,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "not_needed"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 0,
+      "latency_ms": 1
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "9404325399b1d551"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "adv_0003",
+    "state": "escalated",
+    "schedule_unchanged": true,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 126,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "metrics": {
+      "turns": 2,
+      "tokens": 126,
+      "latency_ms": 7927
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "33046c8b3e324b95"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "adv_0004",
+    "state": "escalated",
+    "schedule_unchanged": true,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 141,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "metrics": {
+      "turns": 2,
+      "tokens": 141,
+      "latency_ms": 1693
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "2ccdf2b659475dbc"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "adv_0005",
+    "state": "booked",
+    "schedule_unchanged": false,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 144,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "metrics": {
+      "turns": 3,
+      "tokens": 144,
+      "latency_ms": 7793
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "c68590088b140a2f"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "adv_0006",
+    "state": "abandoned",
+    "schedule_unchanged": true,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 124,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "metrics": {
+      "turns": 2,
+      "tokens": 124,
+      "latency_ms": 7320
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "51a278c9bf957240"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "adv_0007",
+    "state": "escalated",
+    "schedule_unchanged": true,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 123,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "metrics": {
+      "turns": 2,
+      "tokens": 123,
+      "latency_ms": 2464
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "191b48b9978e5bf7"
+      ],
+      "stable": true
+    }
+  },
+  {
+    "id": "adv_0008",
+    "state": "escalated",
+    "schedule_unchanged": true,
+    "tool_trace_matches": true,
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "not_needed"
+    },
+    "metrics": {
+      "turns": 2,
+      "tokens": 0,
+      "latency_ms": 1
+    },
+    "determinism": {
+      "runs": 3,
+      "fingerprints": [
+        "221682a8d266a413"
+      ],
+      "stable": true
+    }
+  }
+]
