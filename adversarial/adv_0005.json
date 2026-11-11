@@ -1,0 +1,23 @@
+{
+  "id": "adv_0005",
+  "description": "Within-turn and later-turn corrections must compose",
+  "today": "2026-10-01",
+  "turns": [
+    "Book Dr. Rao Tuesday 6 tareekh, actually Thursday 8 tareekh.",
+    "Tarun Bisht, 9812200663. Subah gyarah baje.",
+    "Instead shaam paanch baje."
+  ],
+  "expected": {
+    "terminal_state": "booked",
+    "escalation_reason": null,
+    "must_call": [
+      "lookup_patient",
+      "search_slots",
+      "book_appointment"
+    ],
+    "must_not_call": [
+      "escalate_to_human"
+    ],
+    "notes": "The final request is 8 October at 17:00, not Tuesday, not 11:00, and not an invented slot."
+  }
+}

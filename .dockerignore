@@ -1,0 +1,13 @@
+.git
+.env
+.env.*
+private
+.venv
+**/__pycache__
+**/node_modules
+**/dist
+results
+evidence
+tests
+workbench.sqlite3
+*.zip

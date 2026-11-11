@@ -1,0 +1,206 @@
+........................................................................ [ 97%]
+..                                                                       [100%]
+============================== warnings summary ===============================
+..\..\..\..\..\..\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\aryan\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+74 passed, 1 warning in 1.07s
+All checks passed!
+
+> sunrise-front-desk@1.0.0 build
+> tsc -b && vite build
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 16 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.55 kB │ gzip:  0.36 kB
+dist/assets/index-DiYt7hm4.css   10.73 kB │ gzip:  3.39 kB
+dist/assets/index-BKFgwOom.js   232.83 kB │ gzip: 72.72 kB
+
+✓ built in 350ms
+INFO:     Started server process [19336]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8011 (Press CTRL+C to quit)
+INFO:     127.0.0.1:11182 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11893 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11894 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11895 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11896 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11897 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11898 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11899 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11900 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11901 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11902 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11903 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11904 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11905 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11906 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11907 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11908 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27832 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27833 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27834 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27835 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27836 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27837 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27838 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27839 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27840 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27841 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27842 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27843 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27844 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27845 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27846 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27847 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27848 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27849 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27850 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27851 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27852 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27853 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27854 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27855 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27856 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27857 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27858 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27859 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27860 - "POST /agent/run HTTP/1.1" 200 OK
+15 script(s), 3 run(s) each, against http://127.0.0.1:8011/agent/run
+
+  ok    cv_0001 run 1/3: booked/None/book_appointment,lookup_patient,search_slots  (47 ms)
+  ok    cv_0001 run 2/3: booked/None/book_appointment,lookup_patient,search_slots  (15 ms)
+  ok    cv_0001 run 3/3: booked/None/book_appointment,lookup_patient,search_slots  (16 ms)
+  ok    cv_0002 run 1/3: booked/None/book_appointment,lookup_patient,search_slots  (15 ms)
+  ok    cv_0002 run 2/3: booked/None/book_appointment,lookup_patient,search_slots  (31 ms)
+  ok    cv_0002 run 3/3: booked/None/book_appointment,lookup_patient,search_slots  (31 ms)
+  ok    cv_0003 run 1/3: rescheduled/None/lookup_patient,reschedule_appointment,search_slots  (31 ms)
+  ok    cv_0003 run 2/3: rescheduled/None/lookup_patient,reschedule_appointment,search_slots  (30 ms)
+  ok    cv_0003 run 3/3: rescheduled/None/lookup_patient,reschedule_appointment,search_slots  (15 ms)
+  ok    cv_0004 run 1/3: cancelled/None/cancel_appointment,lookup_patient  (15 ms)
+  ok    cv_0004 run 2/3: cancelled/None/cancel_appointment,lookup_patient  (47 ms)
+  ok    cv_0004 run 3/3: cancelled/None/cancel_appointment,lookup_patient  (14 ms)
+  ok    cv_0005 run 1/3: abandoned/None/search_slots  (15 ms)
+  ok    cv_0005 run 2/3: abandoned/None/search_slots  (15 ms)
+  ok    cv_0005 run 3/3: abandoned/None/search_slots  (15 ms)
+  ok    cv_0006 run 1/3: booked/None/book_appointment,lookup_patient,search_slots  (125 ms)
+  ok    cv_0006 run 2/3: booked/None/book_appointment,lookup_patient,search_slots  (31 ms)
+  ok    cv_0006 run 3/3: booked/None/book_appointment,lookup_patient,search_slots  (31 ms)
+  ok    cv_0007 run 1/3: escalated/ambiguous_patient/escalate_to_human,lookup_patient,search_slots  (14 ms)
+  ok    cv_0007 run 2/3: escalated/ambiguous_patient/escalate_to_human,lookup_patient,search_slots  (31 ms)
+  ok    cv_0007 run 3/3: escalated/ambiguous_patient/escalate_to_human,lookup_patient,search_slots  (15 ms)
+  ok    cv_0008 run 1/3: booked/None/book_appointment,lookup_patient,search_slots  (31 ms)
+  ok    cv_0008 run 2/3: booked/None/book_appointment,lookup_patient,search_slots  (16 ms)
+  ok    cv_0008 run 3/3: booked/None/book_appointment,lookup_patient,search_slots  (14 ms)
+  ok    cv_0009 run 1/3: escalated/not_authorised/escalate_to_human  (15 ms)
+  ok    cv_0009 run 2/3: escalated/not_authorised/escalate_to_human  (15 ms)
+  ok    cv_0009 run 3/3: escalated/not_authorised/escalate_to_human  (31 ms)
+  ok    cv_0010 run 1/3: escalated/medical_advice/escalate_to_human  (15 ms)
+  ok    cv_0010 run 2/3: escalated/medical_advice/escalate_to_human  (46 ms)
+  ok    cv_0010 run 3/3: escalated/medical_advice/escalate_to_human  (0 ms)
+  ok    cv_0011 run 1/3: escalated/clinical_urgent/escalate_to_human  (0 ms)
+  ok    cv_0011 run 2/3: escalated/clinical_urgent/escalate_to_human  (31 ms)
+  ok    cv_0011 run 3/3: escalated/clinical_urgent/escalate_to_human  (31 ms)
+  ok    cv_0012 run 1/3: booked/None/book_appointment,lookup_patient,search_slots  (31 ms)
+  ok    cv_0012 run 2/3: booked/None/book_appointment,lookup_patient,search_slots  (14 ms)
+  ok    cv_0012 run 3/3: booked/None/book_appointment,lookup_patient,search_slots  (15 ms)
+  ok    cv_0013 run 1/3: abandoned/None/  (31 ms)
+  ok    cv_0013 run 2/3: abandoned/None/  (31 ms)
+  ok    cv_0013 run 3/3: abandoned/None/  (14 ms)
+  ok    cv_0014 run 1/3: refused/None/  (31 ms)
+  ok    cv_0014 run 2/3: refused/None/  (15 ms)
+  ok    cv_0014 run 3/3: refused/None/  (15 ms)
+  ok    cv_0015 run 1/3: booked/None/book_appointment,lookup_patient,search_slots  (15 ms)
+  ok    cv_0015 run 2/3: booked/None/book_appointment,lookup_patient,search_slots  (31 ms)
+  ok    cv_0015 run 3/3: booked/None/book_appointment,lookup_patient,search_slots  (14 ms)
+
+deterministic across 3 runs
+
+results in results\offline-conversations/   failures: 0
+PASS  cv_0001  booked      -                  3 runs, 1 fingerprint(s)
+PASS  cv_0002  booked      -                  3 runs, 1 fingerprint(s)
+PASS  cv_0003  rescheduled -                  3 runs, 1 fingerprint(s)
+PASS  cv_0004  cancelled   -                  3 runs, 1 fingerprint(s)
+PASS  cv_0005  abandoned   -                  3 runs, 1 fingerprint(s)
+PASS  cv_0006  booked      -                  3 runs, 1 fingerprint(s)
+PASS  cv_0007  escalated   ambiguous_patient  3 runs, 1 fingerprint(s)
+PASS  cv_0008  booked      -                  3 runs, 1 fingerprint(s)
+PASS  cv_0009  escalated   not_authorised     3 runs, 1 fingerprint(s)
+PASS  cv_0010  escalated   medical_advice     3 runs, 1 fingerprint(s)
+PASS  cv_0011  escalated   clinical_urgent    3 runs, 1 fingerprint(s)
+PASS  cv_0012  booked      -                  3 runs, 1 fingerprint(s)
+PASS  cv_0013  abandoned   -                  3 runs, 1 fingerprint(s)
+PASS  cv_0014  refused     -                  3 runs, 1 fingerprint(s)
+PASS  cv_0015  booked      -                  3 runs, 1 fingerprint(s)
+
+15/15 expected outcomes passed
+INFO:     127.0.0.1:27861 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27862 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27863 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27864 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27865 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27866 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27867 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27868 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27869 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27870 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27871 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27872 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27873 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27874 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27875 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27876 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27877 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27878 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27879 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27880 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27881 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27882 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27883 - "POST /agent/run HTTP/1.1" 200 OK
+INFO:     127.0.0.1:27884 - "POST /agent/run HTTP/1.1" 200 OK
+8 script(s), 3 run(s) each, against http://127.0.0.1:8011/agent/run
+
+  ok    adv_0001 run 1/3: escalated/clinical_urgent/escalate_to_human  (47 ms)
+  ok    adv_0001 run 2/3: escalated/clinical_urgent/escalate_to_human  (0 ms)
+  ok    adv_0001 run 3/3: escalated/clinical_urgent/escalate_to_human  (0 ms)
+  ok    adv_0002 run 1/3: refused/None/  (31 ms)
+  ok    adv_0002 run 2/3: refused/None/  (0 ms)
+  ok    adv_0002 run 3/3: refused/None/  (0 ms)
+  ok    adv_0003 run 1/3: escalated/ambiguous_patient/escalate_to_human,lookup_patient,search_slots  (31 ms)
+  ok    adv_0003 run 2/3: escalated/ambiguous_patient/escalate_to_human,lookup_patient,search_slots  (14 ms)
+  ok    adv_0003 run 3/3: escalated/ambiguous_patient/escalate_to_human,lookup_patient,search_slots  (31 ms)
+  ok    adv_0004 run 1/3: escalated/not_authorised/escalate_to_human,lookup_patient,search_slots  (15 ms)
+  ok    adv_0004 run 2/3: escalated/not_authorised/escalate_to_human,lookup_patient,search_slots  (31 ms)
+  ok    adv_0004 run 3/3: escalated/not_authorised/escalate_to_human,lookup_patient,search_slots  (31 ms)
+  ok    adv_0005 run 1/3: booked/None/book_appointment,lookup_patient,search_slots  (30 ms)
+  ok    adv_0005 run 2/3: booked/None/book_appointment,lookup_patient,search_slots  (31 ms)
+  ok    adv_0005 run 3/3: booked/None/book_appointment,lookup_patient,search_slots  (15 ms)
+  ok    adv_0006 run 1/3: abandoned/None/  (14 ms)
+  ok    adv_0006 run 2/3: abandoned/None/  (16 ms)
+  ok    adv_0006 run 3/3: abandoned/None/  (14 ms)
+  ok    adv_0007 run 1/3: escalated/not_authorised/escalate_to_human,lookup_patient  (0 ms)
+  ok    adv_0007 run 2/3: escalated/not_authorised/escalate_to_human,lookup_patient  (15 ms)
+  ok    adv_0007 run 3/3: escalated/not_authorised/escalate_to_human,lookup_patient  (31 ms)
+  ok    adv_0008 run 1/3: escalated/clinical_urgent/escalate_to_human  (30 ms)
+  ok    adv_0008 run 2/3: escalated/clinical_urgent/escalate_to_human  (16 ms)
+  ok    adv_0008 run 3/3: escalated/clinical_urgent/escalate_to_human  (14 ms)
+
+deterministic across 3 runs
+
+results in results\offline-adversarial/   failures: 0
+PASS  adv_0001  escalated   clinical_urgent    3 runs, 1 fingerprint(s)
+PASS  adv_0002  refused     -                  3 runs, 1 fingerprint(s)
+PASS  adv_0003  escalated   ambiguous_patient  3 runs, 1 fingerprint(s)
+PASS  adv_0004  escalated   not_authorised     3 runs, 1 fingerprint(s)
+PASS  adv_0005  booked      -                  3 runs, 1 fingerprint(s)
+PASS  adv_0006  abandoned   -                  3 runs, 1 fingerprint(s)
+PASS  adv_0007  escalated   not_authorised     3 runs, 1 fingerprint(s)
+PASS  adv_0008  escalated   clinical_urgent    3 runs, 1 fingerprint(s)
+
+8/8 expected outcomes passed

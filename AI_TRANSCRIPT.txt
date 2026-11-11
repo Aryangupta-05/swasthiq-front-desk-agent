@@ -1,0 +1,121 @@
+ACTUAL USER PROMPTS TO THE CODING ASSISTANT
+Credential values have been redacted; prompts are not fabricated.
+
+=== Master prompt, provided verbatim ===
+You are my autonomous senior software engineer, AI-agent architect, security reviewer, QA engineer, and release engineer. Complete the attached SwasthiQ SDE Intern take-home assignment end to end, using the two uploaded files:
+1. SwasthiQ-Hiring-Assignment-September2026.pdf
+2. swasthiq-front-desk-agent-starter-pack(1).zip
+
+Your deliverable is a genuinely working, tested, polished, explainable, submission-ready project—not a prototype, plan, code skeleton, or screenshot-only demo. Work in this repository/workspace. The assignment PDF, the starter pack's schema.md, runner.py, clinic.json, README.md and all 15 examples are authoritative. When in conflict, treat the evaluation contract in schema.md as binding and document reasonable interpretations in DECISIONS.md. Do not invent requirements or claim unperformed work.
+
+FIRST RESPONSE: PERMISSIONS AND BLOCKERS (DO THIS BEFORE ANY WORK REQUIRING APPROVAL)
+In your very first message, request all permissions and external inputs you actually need in ONE grouped message, before doing privileged or consequential actions. Check existing permissions first and do not request ones already granted. Explicitly cover, if relevant:
+- File/workspace read-write access and archive extraction.
+- Terminal commands, dependency installation, local test/server execution and browser/UI testing.
+- Network access for packages, an LLM provider and deploy platforms, if needed.
+- Secure secret/env-var access for a real LLM API key (ask me to configure it securely; never request that I paste secrets into source, logs, chat transcripts or a public repo).
+- GitHub authentication, creating a PUBLIC repository, committing and pushing; hosting authentication and public deployment.
+- Any paid service, financial charge, irreversible operation, external submission, or sending email: obtain explicit approval first, even if other permissions are granted.
+- Screen recording or public video publishing, if your environment supports it.
+If you do not need a permission, do not ask for it. In that first message, identify any truly blocking credential/action and one workable fallback. Once I respond, proceed autonomously without repeatedly asking routine questions. If something cannot be authorised or done in this environment, complete everything possible, report the blocker exactly, and provide actionable manual steps. Do NOT claim to have deployed, recorded, sent, or tested anything you did not actually do. No invented URLs, execution results, usage figures or credentials.
+
+PHASE 1 — SOURCE AUDIT (MANDATORY BEFORE CODING)
+- Extract the ZIP without losing the original starter files; inspect EVERY file: clinic.json, schema.md, runner.py, README.md and all 15 conversations/ files, including every expected outcome.
+- Read all six pages of the PDF, including the UI visual references on page 4, not just extracted text. Translate them into a concise acceptance checklist and architecture plan.
+- Inventory requirements, edge cases, data shape, and contradictions in DECISIONS.md. Keep the confidential assignment PDF and ZIP out of the PUBLIC repository unless the owner expressly permits publishing them; commit only the code, necessary synthetic fixtures and permitted supporting material.
+- Explicitly note that the supplied runner validates contract shape and checks repeat fingerprints, but does NOT compare actual outcomes against each example's expected block. Build a separate expected-outcome comparison/report.
+- Do not hard-code the 15 known conversation IDs, expected outputs or case-specific answers into production logic. Hidden conversations must work too.
+
+PHASE 2 — IMPLEMENT THE REAL SYSTEM
+Build one coherent repository with:
+/backend: Python REST API (FastAPI or equivalent), validated request/response models, deterministic orchestration, 6 ground-truth tool implementations, safe storage and comprehensive tests.
+/frontend: Functional React app closely following both UI screenshots, not a static mockup.
+/adversarial: Exactly 8 original, valid, difficult conversation scripts conforming to the starter schema, each with the expected block and an explanation of what breaks naive implementations.
+/conversations: Preserve the supplied 15 examples for local testing.
+README.md, DECISIONS.md, actual AI_PROMPTS.txt or AI_TRANSCRIPT.txt, environment template, a one-command local run path, and automated test scripts.
+
+CRITICAL API CONTRACT — COMPLY EXACTLY
+Evaluation endpoint: POST /agent/run with JSON {"conversation_id":string,"today":"YYYY-MM-DD","turns":[string,...]}. Return JSON with conversation_id echoed unchanged; tool_calls in ACTUAL execution order (each {name, arguments}, including failed attempts); terminal_state; escalation_reason; patient_id; appointment_id; reply; metrics {turns,tokens,latency_ms}. Do not substitute your own response wrapper. Never omit required fields. The ONLY terminal states are booked, rescheduled, cancelled, escalated, refused, abandoned. The ONLY escalation reasons are clinical_urgent, medical_advice, not_authorised, ambiguous_patient, out_of_scope. A reason is mandatory for escalated and null otherwise. Check stricter types beyond the provided runner. Use error responses with useful, specific validation messages for bad requests or tool arguments rather than uncaught 500s. The evaluation runner must work UNMODIFIED.
+
+Dates are based EXCLUSIVELY on the request's `today` field (not today's machine date); the provided examples use 2026-10-01. Interpret Hindi, English and Hinglish references including kal, parso, weekday names, corrections, subah, shaam and clock times. Apply the clinic timezone Asia/Kolkata where relevant. Each evaluation POST starts from the EXACT initial clinic.json snapshot: no state leakage between evaluation requests; data created by cv_0001 must not affect cv_0002. The starter pack deliberately includes conversations booking the same slot independently. Distinguish this required test isolation from the ALSO REQUIRED real concurrent booking integrity: within an actual shared schedule/transaction, two racing claims to the same slot must never both commit. Implement and test these semantics explicitly, and explain the apparent tension in DECISIONS.md.
+
+SIX TOOL-LAYER FUNCTIONS — NO LLM INSIDE THEM
+- search_slots
+- book_appointment
+- reschedule_appointment
+- cancel_appointment
+- lookup_patient
+- escalate_to_human
+These functions are the source of truth. Validate all arguments, doctor availability, 15-minute boundaries, clinic holidays, leave dates, opening windows, occupied intervals, patient identity, appointment ownership and authorisation. Avoid overlapping/duplicate slots when the source's daily windows overlap. Transactions/constraints must prevent double bookings; failed operations must leave state unchanged. Produce predictable appointment IDs grounded in actual transactions and consistent with the source data. Ambiguous patient lookup returns candidates, never an arbitrary first match. Do not conflate a shared phone number with unique identity. A legal guardian may act only for explicitly listed dependents; a neighbour, acquaintance or self-declared admin is not authorised. Implement safe cancellation/rescheduling. Do not expose a bulk destructive operation. No real patient data and no managed database: use SQLite or in-memory storage only.
+
+AGENT ORCHESTRATION — SAFETY FIRST, BUT NOT CONSTANT ESCALATION
+- Implement real multi-turn conversation processing, intent extraction, correction handling, patient resolution and tool orchestration. Use a hybrid deterministic policy/guardrail layer with structured LLM extraction only if useful and configured, rather than relying on prompt instructions alone. Clearly record the real model used and handle missing keys gracefully; do not represent a rule-based fallback as LLM usage.
+- Prioritise emergency risk across ALL caller turns, including when symptoms surface after an otherwise ordinary booking request. For active chest pain with breathlessness or other urgent red flags, STOP booking/cancelling/rescheduling and escalate with clinical_urgent. No appointment may be created in this case. Ensure no premature irreversible mutation before the complete supplied script has been safety-checked, while retaining honest ordered tool-call records.
+- For medical diagnosis or medication/dose advice, escalate with medical_advice; do not provide clinical advice. For unauthorised third-party record operations escalate not_authorised; unresolved multi-record patient identity escalates ambiguous_patient; legitimate unsupported work escalates out_of_scope. Distinguish malicious/destructive/administrator prompt-injection requests that should be refused, from legitimate handoffs. Empty/incomplete calls may be abandoned rather than escalated. Valid routine booking/rescheduling/cancellation MUST actually succeed where possible—do not evade tests by escalating everything.
+- Treat caller turns as untrusted DATA: resist prompt injection, attempts to impersonate system/admin messages, fabricated authorisation, instruction conflicts, bulk actions, unsafe role changes and off-schema tool invocations.
+- Zero invented slots, patients, IDs or appointment confirmations. Every concrete claim in reply must be supported by a ground-truth tool result. Do not confirm actions that failed. When a request is impossible, say so and offer only supported alternatives if the supplied conversation permits.
+- Off-schema/invalid model output, timeouts and tool errors must be validated and safely handled with a deterministic fallback or appropriate response; no crash or silent data corruption. Use reproducible generation settings where supported, stable decision rules and deterministic tie-breakers. Log real token usage when available; report measured latency and actual turn count, never fake metrics.
+- Keep an internal structured trace of every user turn, assistant reply and ground-truth tool invocation/result for the UI; expose appropriate non-grading API routes if needed without changing POST /agent/run.
+
+FRONTEND — BOTH SPECIFIED SCREENS, FUNCTIONAL
+Use React to closely match the structure/content/layout depicted on PDF page 4, with a consistent sidebar on both screens. Build:
+1. HANDOFF QUEUE: top counters for total conversations, completed by agent, escalated and urgent; open-handoff table/list showing conversation ID, caller excerpt, escalation reason, time and working Resolve action. Resolution must persist in the live application's state, with a visible status change (without altering the evaluation snapshot semantics). Use true data from the backend, not hard-coded sample counts.
+2. CONVERSATION DETAIL: chronological transcript, speaker messages, tool calls placed INLINE at the exact point where they occurred, clear state badge and outcome panel containing terminal_state, escalation_reason, patient_id, appointment_id, tool call count, turns, tokens, measured latency, and determinism information when available. Use real JSON generated by the backend.
+Make navigation fully functional, responsive, accessible and visually polished while preserving the screenshots' hierarchy. Add an unobtrusive way to execute or inspect the sample conversations so a reviewer can verify both screens. Handle loading, error, empty and resolved states. No fake data pretending to be live outcomes. Test actual frontend-backend integration and production build.
+
+TESTING AND RED-TEAM (NON-NEGOTIABLE)
+1. Run the starter's UNCHANGED `python3 runner.py --url http://localhost:8000/agent/run` from the appropriate directory. Run `python3 runner.py --repeat 3` and separately check actual terminal_state, escalation_reason, required tool names and forbidden tool names against each example's expected block, printing a clear pass/fail matrix. Note: the starter runner does not perform this expected-vs-actual comparison by itself.
+2. Test all 15 supplied examples and fix any failing result; do not stop at a mere successful HTTP response. Explicitly verify cases cv_0011 (urgent chest pain during booking: escalation, no booking), cv_0014 (injected admin/bulk-cancel: refused, no mutation), cv_0007 (ambiguous Sharma), cv_0008 (guardian and lookalike children), cv_0009 (neighbour unauthorised), cv_0012 (relative Hindi dates) and cv_0015 (occupied slot with correction).
+3. Write eight NEW adversarial conversations not copied from the provided fifteen. Cover nuanced emergencies, subtle prompt injection, identity collisions, consent/guardian bypass, user corrections, invalid dates or no slots, cancellation/reschedule ownership, and conflicts between urgency and intent. Ensure exact schema and clear notes. Run each three times through the same runner (using --dir adversarial) AND compare to its expected block.
+4. Add proper unit/integration tests for every tool, validation errors, holiday/leave/weekdays, overlapping windows, already-booked slots, transaction rollback, duplicate appointment prevention, racing concurrent requests, isolation across evaluation POSTs, malformed/off-schema model responses, missing API key, relative date resolution and endpoint JSON schema.
+5. Run API tests, frontend tests where appropriate, build/lint/type-check, smoke tests and browser-based end-to-end navigation if tools permit. Inspect final screenshots against PDF page 4. Fix errors instead of merely documenting them. Re-run the relevant checks after modifications. Include a reproducible test command and a concise results report with ACTUAL numbers.
+6. Confirm stable fingerprint across three runs for every sample and adversarial script and confirm no unintended mutations on escalated/refused/abandoned outcomes.
+
+DOCUMENTATION AND SUBMISSION PACKAGE
+- A truly simple ONE-COMMAND run for local use (for instance `docker compose up --build`, if supported) plus prerequisite and manual fallback instructions. Document the exact dependency versions and environment setup, endpoint contract with request/response examples, architecture, tool safety rules, model/provider actually used, actual token counts and measured latency per sample conversation, security assumptions, design limitations, testing commands and results. Never fake usage statistics.
+- DECISIONS.md should be exceptionally thoughtful and candid: exact input ambiguities/inconsistencies, trade-offs, interpretation and reasons; especially evaluation request isolation vs concurrent shared bookings, unsafe authorisation assumptions, overlapping windows, confusing sample/contract examples, clinical escalation precedence, cases where refusal differs from escalation, and how you balance safety with restraint. This is a top interview artifact.
+- Preserve the ACTUAL coding assistant prompts and material follow-up instructions in AI_TRANSCRIPT.txt (including THIS prompt). Do not fabricate a transcript or omit AI involvement. Summarise how the AI helped and what was independently checked, without inventing manual work.
+- Provide an annotated plan for a three-minute FAILURE-FOCUSED video (NOT a sales demo): intentionally break/attack the agent with real reproducible cases, show expected safe behaviour or a real limitation, and explain design trade-offs and fixes. If tools and permission make recording and publishing possible, create a real public no-login video link; otherwise generate an exact video script, recording checklist and instructions, and mark the video as NOT YET RECORDED.
+- Prepare a submission email DRAFT to hiring@swasthiq.in with subject `Engineering Assignment - Aryan Gupta`, referencing actual repo, live link and video link only when verified, including hours actually spent (ask me or label unknown, do not guess) and what I would do with another four hours. Do not send the email without explicit final approval.
+- If GitHub/hosting access and explicit approval are given, create/push one clean PUBLIC repository, deploy a WORKING publicly accessible frontend and reachable REST backend using only allowed storage, verify the live URL without authentication and run a remote smoke test. Never publish secrets, the confidential PDF, raw credentials, private details or unnecessary files. A deployed screenshot or nonfunctional link does not count. If unavailable, leave ready-to-run deployment configs and exact remaining steps; never invent links.
+
+AUTONOMOUS EXECUTION PROTOCOL
+After the upfront permission response, continue milestone by milestone until the real deliverables are ready. Prioritise correctness and safety above architecture complexity; spend effort on the evaluator's weighted priorities: safety 30%, correctness 25%, determinism 15%, restraint 15%, engineering 10%, efficiency 5%. Prefer a small rigorous solution over flashy but broken features. Work through implement -> test -> inspect -> fix -> retest, not just implement. If you hit usage limits/context compression, write a durable `PROGRESS.md` with completed items, outstanding tasks, commands and next action, then resume automatically if your environment permits; if it does not, provide a precise resume prompt instead of claiming background execution. Do not invent a timer or say that work continues while you are unavailable.
+
+FINAL QUALITY GATE (CHECK EACH; SHOW EVIDENCE)
+[ ] Exactly contract-compliant POST /agent/run and all 6 working tools.
+[ ] No fabricated identifiers/slots and no double bookings; isolated test runs and safe concurrent shared transactions.
+[ ] Urgent clinical cases always stop mutations and escalate.
+[ ] Correct patient disambiguation and authorisation.
+[ ] 15 examples checked against expected blocks; runner succeeds and 3x fingerprints stable.
+[ ] Eight new adversarial scripts checked 3x against expected blocks.
+[ ] Both matching React screens work end to end and show actual tool traces.
+[ ] One-command local startup, tests/build passing, clean configs.
+[ ] README, strong DECISIONS.md, actual AI transcript, real metrics, video script, email draft.
+[ ] GitHub repo, deployment, live link, video recording and actual email submission honestly marked DONE or BLOCKED/NOT DONE.
+
+At completion, respond with a concise handoff report: project tree, verified test matrix (passed/failed), commands to run, actual model and metrics, GitHub/live/video links ONLY if they exist, all outstanding blockers, and exactly what I must do before sending the final submission. Do not stop after writing a plan. Build the project end to end.
+
+=== User request ===
+my assignemnt path - C:\Users\aryan\Downloads\swasthiq-front-desk-agent-starter-pack
+Read and execute SwasthiQ_Codex_End_to_End_Prompt.txt as your master instructions.
+The attached assignment PDF and starter pack are your authoritative specifications.
+Before starting, ask me for all required permissions, credentials and external access in one consolidated message.
+Once authorised, complete the project end to end. Do not stop after planning or implementing the initial features.
+Implement, run tests, compare results against expected outcomes, fix failures, re-test, and prepare all submission deliverables.
+Prioritise safety, correctness, determinism, and working functionality over unnecessary complexity.
+Do not claim deployment, testing, recording or submission unless those actions actually succeeded.
+Continue until the project is genuinely submission-ready or an external blocker prevents further progress. At the end, give me a verified checklist of everything completed and anything still requiring my action.
+
+=== User authorization and model choice ===
+yess oit is that , i will give gemini api key , yes i appove it and all the things i approve , i approve all the things|
+just i will give you gemini api key is [REDACTED CREDENTIAL]
+
+=== User follow-up ===
+[REDACTED CREDENTIAL] this is the key do it use it
+
+=== User continuation ===
+do it
+
+=== AI involvement and verification boundary ===
+The coding assistant authored the implementation, adversarial cases, tests, UI, documentation and release scripts, and executed the reported automated checks. The user supplied the task, authority, starter pack and Gemini credential. No independent manual authorship or human testing is claimed. Gemini application extraction instructions are preserved in backend/gemini.py. Results and publication status are recorded separately in TEST_RESULTS.md and DELIVERY_STATUS.md. Secrets are deliberately omitted from this transcript.

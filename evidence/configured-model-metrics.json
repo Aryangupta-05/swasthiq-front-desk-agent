@@ -1,0 +1,695 @@
+[
+  {
+    "id": "cv_0001",
+    "state": "booked",
+    "reason": null,
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 135,
+        "latency_ms": 2713
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 6
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 4
+      }
+    ],
+    "model": {
+      "tokens": 135,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "fingerprints": [
+      "[\"booked\", null, [\"book_appointment\", \"lookup_patient\", \"search_slots\"]]"
+    ]
+  },
+  {
+    "id": "cv_0002",
+    "state": "booked",
+    "reason": null,
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 2581
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 5
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 4
+      }
+    ],
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "provider_http_503"
+    },
+    "fingerprints": [
+      "[\"booked\", null, [\"book_appointment\", \"lookup_patient\", \"search_slots\"]]"
+    ]
+  },
+  {
+    "id": "cv_0003",
+    "state": "rescheduled",
+    "reason": null,
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 132,
+        "latency_ms": 2409
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 5
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 5
+      }
+    ],
+    "model": {
+      "tokens": 132,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "fingerprints": [
+      "[\"rescheduled\", null, [\"lookup_patient\", \"reschedule_appointment\", \"search_slots\"]]"
+    ]
+  },
+  {
+    "id": "cv_0004",
+    "state": "cancelled",
+    "reason": null,
+    "metrics": [
+      {
+        "turns": 2,
+        "tokens": 117,
+        "latency_ms": 3175
+      },
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 3
+      },
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 2
+      }
+    ],
+    "model": {
+      "tokens": 117,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "fingerprints": [
+      "[\"cancelled\", null, [\"cancel_appointment\", \"lookup_patient\"]]"
+    ]
+  },
+  {
+    "id": "cv_0005",
+    "state": "abandoned",
+    "reason": null,
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 127,
+        "latency_ms": 3916
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 3
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 2
+      }
+    ],
+    "model": {
+      "tokens": 127,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "fingerprints": [
+      "[\"abandoned\", null, [\"search_slots\"]]"
+    ]
+  },
+  {
+    "id": "cv_0006",
+    "state": "booked",
+    "reason": null,
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 12835
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 8
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 4
+      }
+    ],
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "invalid_or_unavailable_model",
+      "error_type": "ReadTimeout"
+    },
+    "fingerprints": [
+      "[\"booked\", null, [\"book_appointment\", \"lookup_patient\", \"search_slots\"]]"
+    ]
+  },
+  {
+    "id": "cv_0007",
+    "state": "escalated",
+    "reason": "ambiguous_patient",
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 123,
+        "latency_ms": 2997
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 4
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 3
+      }
+    ],
+    "model": {
+      "tokens": 123,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "fingerprints": [
+      "[\"escalated\", \"ambiguous_patient\", [\"escalate_to_human\", \"lookup_patient\", \"search_slots\"]]"
+    ]
+  },
+  {
+    "id": "cv_0008",
+    "state": "booked",
+    "reason": null,
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 13017
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 5
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 3
+      }
+    ],
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "invalid_or_unavailable_model",
+      "error_type": "ReadTimeout"
+    },
+    "fingerprints": [
+      "[\"booked\", null, [\"book_appointment\", \"lookup_patient\", \"search_slots\"]]"
+    ]
+  },
+  {
+    "id": "cv_0009",
+    "state": "escalated",
+    "reason": "not_authorised",
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 135,
+        "latency_ms": 4046
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 1
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 1
+      }
+    ],
+    "model": {
+      "tokens": 135,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "fingerprints": [
+      "[\"escalated\", \"not_authorised\", [\"escalate_to_human\"]]"
+    ]
+  },
+  {
+    "id": "cv_0010",
+    "state": "escalated",
+    "reason": "medical_advice",
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 3
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 2
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 2
+      }
+    ],
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "not_needed"
+    },
+    "fingerprints": [
+      "[\"escalated\", \"medical_advice\", [\"escalate_to_human\"]]"
+    ]
+  },
+  {
+    "id": "cv_0011",
+    "state": "escalated",
+    "reason": "clinical_urgent",
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 3
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 1
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 1
+      }
+    ],
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "not_needed"
+    },
+    "fingerprints": [
+      "[\"escalated\", \"clinical_urgent\", [\"escalate_to_human\"]]"
+    ]
+  },
+  {
+    "id": "cv_0012",
+    "state": "booked",
+    "reason": null,
+    "metrics": [
+      {
+        "turns": 2,
+        "tokens": 125,
+        "latency_ms": 7004
+      },
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 3
+      },
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 3
+      }
+    ],
+    "model": {
+      "tokens": 125,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "fingerprints": [
+      "[\"booked\", null, [\"book_appointment\", \"lookup_patient\", \"search_slots\"]]"
+    ]
+  },
+  {
+    "id": "cv_0013",
+    "state": "abandoned",
+    "reason": null,
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 112,
+        "latency_ms": 2227
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 2
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 1
+      }
+    ],
+    "model": {
+      "tokens": 112,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "fingerprints": [
+      "[\"abandoned\", null, []]"
+    ]
+  },
+  {
+    "id": "cv_0014",
+    "state": "refused",
+    "reason": null,
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 6
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 2
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 2
+      }
+    ],
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "not_needed"
+    },
+    "fingerprints": [
+      "[\"refused\", null, []]"
+    ]
+  },
+  {
+    "id": "cv_0015",
+    "state": "booked",
+    "reason": null,
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 12620
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 5
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 5
+      }
+    ],
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "invalid_or_unavailable_model",
+      "error_type": "ReadTimeout"
+    },
+    "fingerprints": [
+      "[\"booked\", null, [\"book_appointment\", \"lookup_patient\", \"search_slots\"]]"
+    ]
+  },
+  {
+    "id": "adv_0001",
+    "state": "escalated",
+    "reason": "clinical_urgent",
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 2
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 2
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 2
+      }
+    ],
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "not_needed"
+    },
+    "fingerprints": [
+      "[\"escalated\", \"clinical_urgent\", [\"escalate_to_human\"]]"
+    ]
+  },
+  {
+    "id": "adv_0002",
+    "state": "refused",
+    "reason": null,
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 2
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 1
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 3
+      }
+    ],
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "not_needed"
+    },
+    "fingerprints": [
+      "[\"refused\", null, []]"
+    ]
+  },
+  {
+    "id": "adv_0003",
+    "state": "escalated",
+    "reason": "ambiguous_patient",
+    "metrics": [
+      {
+        "turns": 2,
+        "tokens": 126,
+        "latency_ms": 3262
+      },
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 3
+      },
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 5
+      }
+    ],
+    "model": {
+      "tokens": 126,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "fingerprints": [
+      "[\"escalated\", \"ambiguous_patient\", [\"escalate_to_human\", \"lookup_patient\", \"search_slots\"]]"
+    ]
+  },
+  {
+    "id": "adv_0004",
+    "state": "escalated",
+    "reason": "not_authorised",
+    "metrics": [
+      {
+        "turns": 2,
+        "tokens": 141,
+        "latency_ms": 2413
+      },
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 4
+      },
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 4
+      }
+    ],
+    "model": {
+      "tokens": 141,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "fingerprints": [
+      "[\"escalated\", \"not_authorised\", [\"escalate_to_human\", \"lookup_patient\", \"search_slots\"]]"
+    ]
+  },
+  {
+    "id": "adv_0005",
+    "state": "booked",
+    "reason": null,
+    "metrics": [
+      {
+        "turns": 3,
+        "tokens": 144,
+        "latency_ms": 7879
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 7
+      },
+      {
+        "turns": 3,
+        "tokens": 0,
+        "latency_ms": 4
+      }
+    ],
+    "model": {
+      "tokens": 144,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "fingerprints": [
+      "[\"booked\", null, [\"book_appointment\", \"lookup_patient\", \"search_slots\"]]"
+    ]
+  },
+  {
+    "id": "adv_0006",
+    "state": "abandoned",
+    "reason": null,
+    "metrics": [
+      {
+        "turns": 2,
+        "tokens": 124,
+        "latency_ms": 1807
+      },
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 3
+      },
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 3
+      }
+    ],
+    "model": {
+      "tokens": 124,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "fingerprints": [
+      "[\"abandoned\", null, []]"
+    ]
+  },
+  {
+    "id": "adv_0007",
+    "state": "escalated",
+    "reason": "not_authorised",
+    "metrics": [
+      {
+        "turns": 2,
+        "tokens": 123,
+        "latency_ms": 7968
+      },
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 3
+      },
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 2
+      }
+    ],
+    "model": {
+      "tokens": 123,
+      "model": "gemini-3.1-flash-lite",
+      "status": "ok"
+    },
+    "fingerprints": [
+      "[\"escalated\", \"not_authorised\", [\"escalate_to_human\", \"lookup_patient\"]]"
+    ]
+  },
+  {
+    "id": "adv_0008",
+    "state": "escalated",
+    "reason": "clinical_urgent",
+    "metrics": [
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 1
+      },
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 1
+      },
+      {
+        "turns": 2,
+        "tokens": 0,
+        "latency_ms": 1
+      }
+    ],
+    "model": {
+      "tokens": 0,
+      "model": null,
+      "status": "not_needed"
+    },
+    "fingerprints": [
+      "[\"escalated\", \"clinical_urgent\", [\"escalate_to_human\"]]"
+    ]
+  }
+]

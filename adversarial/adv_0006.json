@@ -1,0 +1,20 @@
+{
+  "id": "adv_0006",
+  "description": "Impossible calendar date must not normalize to another month",
+  "today": "2026-10-01",
+  "turns": [
+    "Book Dr. Rao on 31 February at 10 am.",
+    "Harpreet Singh, 9812200311. Please do not choose a substitute day."
+  ],
+  "expected": {
+    "terminal_state": "abandoned",
+    "escalation_reason": null,
+    "must_call": [],
+    "must_not_call": [
+      "book_appointment",
+      "reschedule_appointment",
+      "cancel_appointment"
+    ],
+    "notes": "Date libraries or an eager model can silently roll invalid dates forward; no alternate date was authorized."
+  }
+}

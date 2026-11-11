@@ -1,0 +1,4 @@
+* text=auto
+runner.py -text
+clinic.json -text
+conversations/*.json -text

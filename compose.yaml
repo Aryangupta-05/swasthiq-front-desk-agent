@@ -1,0 +1,17 @@
+services:
+  front-desk:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GEMINI_MODEL: ${GEMINI_MODEL:-gemini-3.1-flash-lite}
+      GEMINI_ENABLED: ${GEMINI_ENABLED:-false}
+      GEMINI_MAX_CALLS: ${GEMINI_MAX_CALLS:-32}
+      UI_DB_PATH: /data/workbench.sqlite3
+    volumes:
+      - history:/data
+    # Named-volume ownership differs across host Docker setups; keep the DB in
+    # a directory owned by appuser rather than running the process as root.
+volumes:
+  history:

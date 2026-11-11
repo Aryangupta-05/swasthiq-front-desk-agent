@@ -1,0 +1,214 @@
+{
+  "passed": 8,
+  "total": 8,
+  "rows": [
+    {
+      "id": "adv_0001",
+      "passed": true,
+      "runs": 3,
+      "errors": [],
+      "metrics": [
+        {
+          "turns": 3,
+          "tokens": 0,
+          "latency_ms": 4
+        },
+        {
+          "turns": 3,
+          "tokens": 0,
+          "latency_ms": 1
+        },
+        {
+          "turns": 3,
+          "tokens": 0,
+          "latency_ms": 2
+        }
+      ],
+      "fingerprints": [
+        "[\"escalated\", \"clinical_urgent\", [\"escalate_to_human\"]]"
+      ]
+    },
+    {
+      "id": "adv_0002",
+      "passed": true,
+      "runs": 3,
+      "errors": [],
+      "metrics": [
+        {
+          "turns": 3,
+          "tokens": 0,
+          "latency_ms": 2
+        },
+        {
+          "turns": 3,
+          "tokens": 0,
+          "latency_ms": 1
+        },
+        {
+          "turns": 3,
+          "tokens": 0,
+          "latency_ms": 2
+        }
+      ],
+      "fingerprints": [
+        "[\"refused\", null, []]"
+      ]
+    },
+    {
+      "id": "adv_0003",
+      "passed": true,
+      "runs": 3,
+      "errors": [],
+      "metrics": [
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 4
+        },
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 4
+        },
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 4
+        }
+      ],
+      "fingerprints": [
+        "[\"escalated\", \"ambiguous_patient\", [\"escalate_to_human\", \"lookup_patient\", \"search_slots\"]]"
+      ]
+    },
+    {
+      "id": "adv_0004",
+      "passed": true,
+      "runs": 3,
+      "errors": [],
+      "metrics": [
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 3
+        },
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 4
+        },
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 4
+        }
+      ],
+      "fingerprints": [
+        "[\"escalated\", \"not_authorised\", [\"escalate_to_human\", \"lookup_patient\", \"search_slots\"]]"
+      ]
+    },
+    {
+      "id": "adv_0005",
+      "passed": true,
+      "runs": 3,
+      "errors": [],
+      "metrics": [
+        {
+          "turns": 3,
+          "tokens": 0,
+          "latency_ms": 10
+        },
+        {
+          "turns": 3,
+          "tokens": 0,
+          "latency_ms": 7
+        },
+        {
+          "turns": 3,
+          "tokens": 0,
+          "latency_ms": 7
+        }
+      ],
+      "fingerprints": [
+        "[\"booked\", null, [\"book_appointment\", \"lookup_patient\", \"search_slots\"]]"
+      ]
+    },
+    {
+      "id": "adv_0006",
+      "passed": true,
+      "runs": 3,
+      "errors": [],
+      "metrics": [
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 3
+        },
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 2
+        },
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 2
+        }
+      ],
+      "fingerprints": [
+        "[\"abandoned\", null, []]"
+      ]
+    },
+    {
+      "id": "adv_0007",
+      "passed": true,
+      "runs": 3,
+      "errors": [],
+      "metrics": [
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 3
+        },
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 5
+        },
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 4
+        }
+      ],
+      "fingerprints": [
+        "[\"escalated\", \"not_authorised\", [\"escalate_to_human\", \"lookup_patient\"]]"
+      ]
+    },
+    {
+      "id": "adv_0008",
+      "passed": true,
+      "runs": 3,
+      "errors": [],
+      "metrics": [
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 2
+        },
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 2
+        },
+        {
+          "turns": 2,
+          "tokens": 0,
+          "latency_ms": 2
+        }
+      ],
+      "fingerprints": [
+        "[\"escalated\", \"clinical_urgent\", [\"escalate_to_human\"]]"
+      ]
+    }
+  ]
+}
